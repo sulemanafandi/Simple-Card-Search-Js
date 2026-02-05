@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 5px 0 0 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.card {
+  border-radius: 16px;
+  padding: 10px;
+  border: 1px solid black;
+}
+.card img {
+  height: 250px;
+  border-radius: 10px;
+}
+.detail-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #ffffff90; */
+}
+#proimage {
+  width: 80%;
+  height: 380px;
+  background-size: cover;
+  border-radius: 10px;
+}

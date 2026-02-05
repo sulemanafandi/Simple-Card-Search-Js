@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Details</title>
+
+</head>
+
+<body>
+    <div class="detail-container">
+        <div class="container">
+            <h1 class="mb-2 display-5 fw-bold">Product Details</h1>
+
+            <div class="row">
+                <div class="col-6">
+                    <img src="" id="proimage" class="img-fluid" alt="">
+                </div>
+                <div class="col-6">
+                    <h4 class="display-3 fw-bold" id="protitle">Title</h4>
+                    <h4 class="display-6 text-black-50 fw-semibold" id="procaterogy">Category</h4>
+                    <p class="fw-medium" id="prodescription">Lorem ipsum</p>
+                    <h4 class="fw-bold" id="proprice">$899</h4>
+                    <button class="btn btn-primary mt-2">Download Details</button>
+                    <button class="btn btn-outline-primary mt-2">Add to Cart </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        let url = new URL(window.location.href);
+        let index = url.searchParams.getAll('index');
+        console.log(products[index])
+
+        document.getElementById('proimage').setAttribute('src', products[index].image)
+        document.getElementById('protitle').innerHTML = products[index].title;
+        document.getElementById('proprice').innerHTML = products[index].price;
+        document.getElementById('procaterogy').innerHTML = products[index].category;
+        document.getElementById('prodescription').innerHTML = products[index].discription;
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
